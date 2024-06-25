@@ -39,7 +39,7 @@ public class LoginFrame extends JFrame implements ActionListener {
         }
 
         private void setUsername(){
-                JLabel userNameText = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/quzzle/素材/login/用户名.png"));
+                JLabel userNameText = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/login/用户名.png"));
                 userNameText.setBounds(116,135,47,17);
                 this.getContentPane().add(userNameText);
 
@@ -49,7 +49,7 @@ public class LoginFrame extends JFrame implements ActionListener {
         }
 
         private void setPassword(){
-                JLabel passwordtext = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/quzzle/素材/login/密码.png"));
+                JLabel passwordtext = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/login/密码.png"));
                 passwordtext.setBounds(130,195,32,16);
                 this.getContentPane().add(passwordtext);
 
@@ -71,7 +71,7 @@ public class LoginFrame extends JFrame implements ActionListener {
         }
 
         private void setVarify(){
-                JLabel varify = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/quzzle/素材/login/验证码.png"));
+                JLabel varify = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/login/验证码.png"));
                 varify.setBounds(133,256,50,30);
                 this.getContentPane().add(varify);
 
@@ -90,7 +90,7 @@ public class LoginFrame extends JFrame implements ActionListener {
         private void setLoginButton(){
 
                 loginButton.setBounds(123,310,128,47);
-                loginButton.setIcon(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/quzzle/素材/login/登录按钮.png"));
+                loginButton.setIcon(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/login/登录按钮.png"));
                 loginButton.setBorderPainted(false);
                 loginButton.setContentAreaFilled(false);
                 this.getContentPane().add(loginButton);
@@ -101,14 +101,14 @@ public class LoginFrame extends JFrame implements ActionListener {
 
         private void setRegisterButton(){
                 registerButton.setBounds(256,310,128,47);
-                registerButton.setIcon(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/quzzle/素材/login/注册按钮.png"));
+                registerButton.setIcon(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/login/注册按钮.png"));
                 registerButton.setBorderPainted(false);
                 registerButton.setContentAreaFilled(false);
                 this.getContentPane().add(registerButton);
         }
 
         private void setBackgroundImage(){
-                JLabel bg = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/quzzle/素材/login/background.png"));
+                JLabel bg = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/login/background.png"));
                 bg.setBounds(0,0,470,390);
                 this.getContentPane().add(bg);
         }
