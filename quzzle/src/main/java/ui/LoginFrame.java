@@ -176,7 +176,11 @@ public class LoginFrame extends JFrame implements ActionListener {
                 if (obj == registerButton){
                         System.out.println("register");
                         this.setVisible(false);
-                        new RegisterJframe();
+                        try {
+                                new RegisterJFrame();
+                        } catch (IOException e) {
+                                throw new RuntimeException(e);
+                        }
                 }
         }
 
@@ -187,7 +191,6 @@ public class LoginFrame extends JFrame implements ActionListener {
                         }
                 }
                 return false;
-
         }
 
         public void showDialog(String s) {
