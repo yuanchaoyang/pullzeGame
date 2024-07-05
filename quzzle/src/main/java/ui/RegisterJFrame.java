@@ -68,6 +68,8 @@ public class RegisterJFrame extends JFrame implements MouseListener {
                         throw new RuntimeException(ex);
                     }
                 }
+            }else{
+                showDialog("密码错误");
             }
         }
 

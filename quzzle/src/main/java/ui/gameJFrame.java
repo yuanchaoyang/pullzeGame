@@ -23,10 +23,10 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
         private int[][] win = {
                 {1,5,9,13},{2,6,10,14},{3,7,11,15},{4,8,12,16}
         };
-        private JMenuItem replay = new JMenuItem("replay");
-        private JMenuItem reLogin = new JMenuItem("reLogin");
-        private JMenuItem exit = new JMenuItem("exit");
-        private JMenuItem socialAccount  = new JMenuItem("social account");
+        private JMenuItem replay = new JMenuItem("重新开始");
+        private JMenuItem reLogin = new JMenuItem("重新登录");
+        private JMenuItem exit = new JMenuItem("退出游戏");
+        private JMenuItem socialAccount  = new JMenuItem("社交媒体");
         private JMenuItem girl = new JMenuItem("美女");
         private JMenuItem animal = new JMenuItem("动物");
         private JMenuItem sports = new JMenuItem("运动");
@@ -93,18 +93,23 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
         private void initPicture(){
                 this.getContentPane().removeAll();
 
-                if (success()){
+                /*if (success()){
                         JLabel winlabel = new JLabel(new ImageIcon(winPath));
                         winlabel.setBounds(203,283,197,73);
                         this.getContentPane().add(winlabel);
-                }
+                }*/
 
                 countStep();
+
+
+//        "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/animal/animal" + picNum + "/";
+//        "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/animal/animal3";
+//           /Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/animal/animal3/1.jpg
 
                 for (int y = 0; y < 4; y++){
                         for (int x = 0; x < 4; x++) {
                                 int imgNumber = data[x][y];
-                                JLabel jlabel = new JLabel(new ImageIcon(path + imgNumber + ".jpg"));
+                                JLabel jlabel = new JLabel(new ImageIcon(path +"/"+ imgNumber + ".jpg"));
                                 jlabel.setBounds(105 * x + 83,105 * y + 134,105,105);
                                 jlabel.setBorder(new BevelBorder (BevelBorder.RAISED));
                                 this.getContentPane().add(jlabel);
@@ -170,6 +175,7 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
                 int code = e.getKeyCode();
                 if (code == 32){
                         this.getContentPane().removeAll();
+
                         JLabel all = new JLabel(new ImageIcon(path + "all.jpg"));
                         all.setBounds(83, 134,420,420);
                         all.setBorder(new BevelBorder (BevelBorder.RAISED));
@@ -188,9 +194,9 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
         @Override
         public void keyReleased(KeyEvent e) {
                 int code = e.getKeyCode();
-                if (success()){
-                        return;
-                }
+//                if (success()){
+//                        return;
+//                }
 
                 switch(code){
 //                        left
