@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.beancontext.BeanContextServiceProvider;
+import java.io.IOException;
 import java.util.Random;
 import java.util.stream.IntStream;
 
@@ -15,9 +16,9 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
         private int[][] data = new int[4][4];
         private int x;
         private int y;
-        private String path = "/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/animal/animal3/";
-        private String bgPath = "/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/background.png";
-        private String winPath = "/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/win.png";
+        private String path = "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/animal/animal3";
+        private String bgPath = "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/background.png";
+        private String winPath = "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/win.png";
         private int number = 0;
         private int[][] win = {
                 {1,5,9,13},{2,6,10,14},{3,7,11,15},{4,8,12,16}
@@ -266,12 +267,16 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
                 //重新登录
                 if (obj == reLogin){
                         this.setVisible(false);
-                        new LoginFrame();
+                        try {
+                                new LoginFrame();
+                        } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                        }
                 }
                 //社交账号
                 if (obj == socialAccount){
                         JDialog wechat = new JDialog();
-                        JLabel jLabel = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/social.png"));
+                        JLabel jLabel = new JLabel(new ImageIcon("/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/social.png"));
                         jLabel.setBounds(0,0,828,1124);
                         wechat.getContentPane().add(jLabel);
                         wechat.setSize(1000,2000);
@@ -285,7 +290,7 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
                         int picNum = rn.nextInt(13) + 1;
                         initData();
                         number = 0;
-                        path = "/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/girl/girl" + picNum + "/";
+                        path = "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/girl/girl" + picNum + "/";
                         initPicture();
 
                 }
@@ -294,7 +299,7 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
                         int picNum = rn.nextInt(8) + 1;
                         initData();
                         number = 0;
-                        path = "/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/animal/animal" + picNum + "/";
+                        path = "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/animal/animal" + picNum + "/";
                         initPicture();
                 }
                 if (obj == sports){
@@ -302,7 +307,7 @@ public class gameJFrame extends JFrame implements KeyListener, ActionListener {
                         int picNum = rn.nextInt(10) + 1;
                         initData();
                         number = 0;
-                        path = "/Users/yangyuanchao/Desktop/Zhongruan/pullzeGame/quzzle/素材/sport/sport" + picNum + "/";
+                        path = "/Users/yangyuanchao/Desktop/javaProject/pullzeGame/quzzle/素材/sport/sport" + picNum + "/";
                         initPicture();
                 }
 
