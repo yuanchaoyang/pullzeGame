@@ -73,6 +73,12 @@ public class RegisterJFrame extends JFrame implements MouseListener {
             }
         }
 
+        if (e.getSource() == reset){
+            username.setText("");
+            password.setText("");
+            rePassword.setText("");
+        }
+
     }
 
     @Override
